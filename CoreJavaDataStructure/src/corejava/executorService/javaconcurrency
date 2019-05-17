@@ -1,0 +1,48 @@
+Semaphore
+-------------
+A semaphore controls access to a shared resource through the use of a counter. If the counter is greater than zero, 
+then access is allowed. If it is zero, then access is denied. What the counter is counting are permits that allow 
+access to the shared resource. Thus, to access the resource, a thread must be granted a permit from the semaphore.
+
+Working of semaphore
+
+In general, to use a semaphore, the thread that wants access to the shared resource tries to acquire a permit.
+
+If the semaphore’s count is greater than zero, then the thread acquires a permit, which causes the semaphore’s count 
+to be decremented.
+Otherwise, the thread will be blocked until a permit can be acquired.
+When the thread no longer needs an access to the shared resource, it releases the permit, which causes the 
+semaphore’s count to be incremented.
+If there is another thread waiting for a permit, then that thread will acquire a permit at that time.
+Java provide Semaphore class in java.util.concurrent package that implements this mechanism, so you don’t 
+have to implement your own semaphores.
+
+Semaphores method
+------------------
+tryAcquire() – return true if a permit is available immediately and acquire it otherwise return false, 
+			   but acquire() acquires a permit and blocking until one is available
+release() –    release a permit
+
+availablePermits() – return number of current permits available.
+
+
+MUTEX (Mutual exclusion)
+	A Mutex is a lock that we set before using a shared resource and release after using it.
+	When the lock is set, no other thread can access the locked region of code.
+	So we see that even if thread 2 is scheduled while thread 1 was not done accessing the 
+	shared resource and the code is locked by thread 1 using mutexes then thread 2 cannot even access that region of code.
+	So this ensures a synchronized access of shared resources in the code.
+	
+	Working of a mutex
+
+	Suppose one thread has locked a region of code using mutex and is executing that piece of code.
+	Now if scheduler decides to do a context switch, then all the other threads which are ready to 
+	execute the same region are unblocked.Only one of all the threads would make it to the execution 
+	but if this thread tries to execute the same region of code that is already locked then it will 
+	again go to sleep.Context switch will take place again and again but no thread would be able to 
+	execute the locked region of code until the mutex lock over it is released.
+	Mutex lock will only be released by the thread who locked it.
+	So this ensures that once a thread has locked a piece of code then no other thread can execute 
+	the same region until it is unlocked by the thread who locked it.
+	Hence, this system ensures synchronization among the threads while working on shared resources.
+

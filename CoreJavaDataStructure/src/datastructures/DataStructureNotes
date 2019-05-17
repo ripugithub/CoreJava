@@ -1,0 +1,58 @@
+Programs on Data Structures
+https://www.geeksforgeeks.org/data-structures/
+https://www.geeksforgeeks.org/binary-tree-set-1-introduction/
+
+NoSQL
+https://medium.com/xplenty-blog/the-sql-vs-nosql-difference-mysql-vs-mongodb-32c9980e67b2
+
+https://hackernoon.com/50-data-structure-and-algorithms-interview-questions-for-programmers-b4b1ac61f5b0
+
+https://medium.com/@codingfreak/500-data-structures-and-algorithms-practice-problems-35afe8a1e222
+
+https://hackernoon.com/50-data-structure-and-algorithms-interview-questions-for-programmers-b4b1ac61f5b0
+
+AntiPatterns
+https://sourcemaking.com/antipatterns
+Web application Architecture
+https://stackify.com/web-application-architecture/
+
+Design principles
+https://www.youtube.com/watch?v=llGgO74uXMI
+
+
+Java streams
+https://www.youtube.com/watch?v=1OpAgZvYXLQ
+
+Venkat subramanium codes
+
+http://www.agiledeveloper.com/downloads.html
+
+
+Solid Design principles
+https://howtodoinjava.com/best-practices/5-class-design-principles-solid-in-java/
+https://scotch.io/bar-talk/s-o-l-i-d-the-first-five-principles-of-object-oriented-design
+
+Data structures time and space complexity
+https://www.geeksforgeeks.org/analysis-of-algorithms-set-4-analysis-of-loops/
+https://www.studytonight.com/data-structures/introduction-to-data-structures
+https://stackoverflow.com/questions/11032015/how-to-find-time-complexity-of-an-algorithm
+
+
+
+https://www.codechef.com/certification/data-structures-and-algorithms/prepare
+https://www.youtube.com/watch?v=__vX2sjlpXU
+General rules for Big O notation
+-------------------------------------
+1. Ignore constants
+5n - >O(n)
+2. O(1) < O(logn) < O(n) < O(nLogn) < O(n^2) < O(2^n) < O(n!)
+
+Total runtime in an algorithm is max runtime of the step in the algoritm since the lower order runtime is dropped or negligible
+
+O(1)  -> Constant Time 
+e.g. Below expression does not depend on input size hence the time complexity is a constant time i.e O(1)
+	x=5+(15*20)
+	
+	
+	
+	https://www.youtube.com/watch?v=l_AjnSoqIWQ&list=PLt4nG7RVVk1jSKVFOcpxqXNrARYUEOOSV
