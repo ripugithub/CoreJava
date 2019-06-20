@@ -1,0 +1,62 @@
+
+
+Comparable Interface
+---------------------
+Comparable interface is used to sort the arrays of custom objects.
+primitive types like integer and Strings can be sorted by calling 
+Arrays.sort() and Collections.sort() but in order to sort custom 
+objects the custom class needs to implement Comparable interface.
+
+The Comparable interface has only one method.
+
+		public abstract int compareTo(T obj)
+		
+Implementing Comparable means i can compare the class with another object.
+The class must implements the java.lang.Comparable interface in order to 
+be able to compare its instance
+
+		
+Comparator Interface
+----------------------
+If multiple sorting choices are required based on 
+the different data members ,this can be done using Comparator
+
+e.g
+Below class can be passed as the parameter in Collections.sort()
+import java.util.Comparator;
+
+public class AuthorAgeComparator implements Comparator<Author1> {
+	
+	public int compare(Author1 a1, Author1 a2)
+	{
+		if(a1.auAge==a2.auAge)
+			return 0;
+		else if(a1.auAge>a2.auAge)
+			return 1;
+		else
+			return -1;
+	}
+}
+
+Collections.sort(al, new AuthorAgeComparator());
+
+A comparator object is capable of comparing two different objects. 
+The class is not comparing its instances, but some other class’s instances. 
+This comparator class must implement the java.util.Comparator interface.
+
+
+
+static void reverseArray(int[] array int start, int end)
+{
+		int temp;
+		
+		while(start<end)
+		{
+			temp = arr[start];
+			arr[start] = arr[end];
+			arr[end] = temp
+		start++;
+		end--;
+		}
+
+}

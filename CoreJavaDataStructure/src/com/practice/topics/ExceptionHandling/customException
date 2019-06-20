@@ -1,0 +1,131 @@
+Custom Checked Exception
+-------------------------
+https://www.geeksforgeeks.org/java-gq/exception-handling-2-gq/
+Throwable class is the built-in base class used to handle all the exceptions in Java
+
+Java exceptions cover almost all the exceptions but sometimes we need
+ to provide our own custom exceptions which are specific to our business needs.
+ 
+ source - https://www.baeldung.com/java-new-custom-exception
+ 
+ https://stackoverflow.com/questions/6115896/java-checked-vs-unchecked-exception-explanation?rq=1
+ 
+ There are several reasons why we need custom exceptions
+ 	- Business logic exceptions
+ 	- to catch and provide specific information pertaining to the business logic.
+
+ 	Below code is catching FileNotFoundException 
+ 			try (Scanner file = new Scanner(new File(fileName))) 
+ 			{ 	    			
+    			if (file.hasNextLine()) 
+    				return file.nextLine();
+				} catch(FileNotFoundException e) {
+   			 		// Logging, etc 
+			}
+			
+	Above code might also throw some other type of exception like incorrect file name, so to 
+	create a custom exception to catch exception specific to file name we need to create a 
+	custom exception class extending java.lang.Exception class 
+	
+	Custom Checked Exception
+	---------------------------
+	public class InvalidFileNameException extends Exception{
+	
+		public InvalidFileNameException(String message){
+			super(message);
+		}
+	} 
+	
+	Note that we also have to provide a constructor that takes a String as the error message and called the parent class constructor.
+	
+	
+	try (Scanner file = new Scanner(new File(fileName))) {
+	
+    		if (file.hasNextLine())
+    		
+        return file.nextLine();
+        
+			} catch (FileNotFoundException e)
+			{
+   	 			if (!isCorrectFileName(fileName)) {
+        		throw new IncorrectFileNameException("Incorrect filename : " + fileName );
+    		}
+   			 //...
+	}
+	
+	
+	Custom Unchecked Exception
+	---------------------------
+	
+	To create a custom unchecked exception we need to extend the java.lang.RuntimeException class:
+	
+	We can define our custom Unchecked exception this way:
+	
+	public class IncorrectFileExtensionException 
+  		extends RuntimeException {
+   		 public IncorrectFileExtensionException(String errorMessage, Throwable err) {
+       		 super(errorMessage, err);
+    		}
+	}
+	
+	
+	public class InvalidFileExtension extends RuntimeException{
+	
+		public InvalidFileExtension(String errMessage, Throwable err){
+			super(errMessage,err);
+		}
+	}
+	
+	
+	https://www.journaldev.com/1696/exception-handling-in-java
+	
+	Throwable is the Parent class of Java Exceptions
+	Throwable has two child objects -Exception
+									-Error
+									
+	Exception is further divided in to Checked Exception e.g IOException, FileNotFoundException, 
+									   Runtime Exception NullPointerException
+	
+	Checked Exception: Checked Exception are exceptional scenarios that we can anticipate in the  program and recover it.
+	Checked  exception are subclasses of Exception class
+	------------------ e.g FileNotFoundException
+	
+	RuntimeException/Unchecked Exception : It is caused by bad programming. 
+	Unchecked exception are subclasses of RuntimeException
+	For example trying to retrieve an element from an array.We should try to check the elements 
+	first and then try to retrieve it otherwise we may get ArrayIndexOutOfBoundException at runtime, IllegalArgumentException .
+	
+	
+ - 	If we are throwing any runtime exception in a method, it’s not required to specify them in the 
+	method signature throws clause. Runtime exceptions can be avoided with better programming.
+	
+ -  We should always throw and catch specific exception classes so that caller will know the root 
+	cause of exception easily and process them
+	
+-   There is no single rule to let you determine when to catch, when to rethrow, when to use 
+	checked and when to use unchecked exceptions the general principle is to rethrow an exception 
+	to the layer where you can handle it.
+	The Java compiler forces you to either catch checked exceptions or declare them in the method signature
+	
+	
+	On try-catching RuntimeExceptions
+	---------------------------------
+	RuntimeExceptions as a general rule should not be try-catched. They generally signal a programming 
+	error and should be left alone. Instead the programmer should check the error condition before 
+	invoking some code which might result in a RuntimeException
+	
+	In below example the program compiles fine if you do not enclose Integer.parseInt(xVal) within 
+	try catch block however if to gracefully execute the program we need to handle the NumberFormatEception. 
+	e.g
+	private int ConvertIntoNumeric(String xVal)
+	{
+	 try
+	  { 
+	     return Integer.parseInt(xVal);
+	  }
+	 catch(Exception ex) 
+	  {
+	     return 0; 
+	  }
+	}
+	

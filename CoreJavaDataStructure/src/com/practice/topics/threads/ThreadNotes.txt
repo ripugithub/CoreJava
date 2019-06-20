@@ -1,0 +1,87 @@
+	The Object class in java have three(wait, notify and notifyAll) final methods which are used in inter thread 
+	communication about the lock status of a resource.
+	
+	https://www.journaldev.com/171/thread-safety-in-java-singleton-classes-with-example-code
+	
+	https://dzone.com/articles/top-15-java-multithreading-concurrency-interview-q
+	https://www.journaldev.com/1162/java-multithreading-concurrency-interview-questions-answers
+	http://javabypatel.blogspot.com/2016/09/java-multithreading-interview-questions-answers.html
+	https://www.javamadesoeasy.com/2015/03/threads-top-75-interview-questions-and_9.html
+	Running multiple threads
+	https://crunchify.com/how-to-run-multiple-threads-concurrently-in-java-executorservice-approach/
+	
+	Wait
+	-----
+	Wait method of an object put the currently running thread in waiting state either indefinitely 
+	or for some time specified while calling wait method.
+	
+	
+	notify
+	------
+	notify method wakes up only one thread waiting on the object and it starts execution.
+	
+	If there are multiple threads waiting on the resource (object) ,only one thread wakes up and starts executing 
+	and the thread which wakes up cannot be guaranteed and depends upon OS implementation of Thread management.
+	
+	
+	notifyAll
+	---------
+	notifyAll methods wakes up all the threads waiting on the object but which thread will get 
+	preference depends on the OS implementation.
+	
+	
+	sleep
+	--------
+	This method cause the thread to sleep for specified amount of time.
+	Causes the currently executing thread to sleep (temporarily cease execution) for the specified 
+	number of milliseconds, subject to the precision and accuracy of system timers and schedulers. 
+	The thread does not lose ownership of any monitors.
+	
+	
+	yield
+	------
+	yield method pauses the currently executing thread for giving chance to remaining waiting threads.
+	If there are no waiting threads or all the waiting threads have lower priority then the same thread
+	will continue its execution.
+	
+	
+	join
+	-------
+	join method causes the executing thread to complete its execution i.e. if a 
+	thread t calls join then the thread will execute till its completion.
+	
+	
+	synchronized
+	-------------
+	synchronized keyword can be used in two ways 
+	1. to make a complete method synchronized.
+	2. create synchronized block
+	
+	->When a method is synchronized it locks the object and if the method is static it locks the class. so it 
+	is best practice to use the static block
+	
+	
+	While creating the synchronized block we need to provide the resource either object or class XYZ.class
+	
+	synchronized(this) will lock the Object before entering into the synchronized block
+	->When we lock an object it acquires lock on all the fields of the Object.
+	
+	->Java synchronized keyword cannot be used for constructors and variables.
+	
+	->We should not use any object that is maintained in a constant pool i.e String should not be used 
+	for synchronization because if any other code is locking on same String it will try to acquire lock 
+	on same reference object 
+	
+	It is preferable to create a dummy private Object to use for synchronized block, so that it’s 
+	reference can’t be changed by any other code
+	see ThreadSafety.java class for example for the same
+	
+	Difference between start() and run() method of thread
+	
+	thread.start() starts a new Thread and is required to runnable's run method is executed in parallel.
+	thread.run() will run as normal java execution and a new thread will not start.
+	
+	You cannot call start() method twice doing so ,compiler will throw IllegalStateException while 
+	run method can be called several times as it is trea
+	
+	

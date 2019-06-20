@@ -1,0 +1,12 @@
+
+ - In lambda expressions a piece of code becomes the value of the variable and wherever that variable is used 
+   the values goes with it.
+   
+  - All that is required to create a lambda expression is a matching method signature from an interface .
+  - Lambda behaves like an implementation of an interface.
+  
+  Why Lambdas
+   - It enables functional programming
+   - Readable and concise code.
+   - Easier to use API
+   - Enables support for parallel processing

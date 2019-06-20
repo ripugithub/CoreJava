@@ -1,0 +1,68 @@
+Lambdas
+Functional Interface
+Predicates
+Exception handling with lambdas using predicates
+Closures
+Method References
+Collection improvements through iteration using forEach() loop
+
+
+
+Why Lambdas?
+		- Enables functional programming. till now we were used to 
+		  write object oriented programming but lambdas enables us to write functional programming in Java.
+		- It enables us to write readable code and removes some of the boiler plate code in java.
+		- It enables support for parallel processing.
+
+		Functional programming introduced through Lambdas does not do anything new that could not have been done before 
+		using java Object oriented concepts but lets us write readable ,maintainable code.
+		
+		Lambda expression example
+		Let say we have a function which return double of a number.
+		
+		doubleNumberFunction = public int double(int a){
+		return a*2;
+		}
+		Above code can be shortened to a lambda expression by removing boiler plate code(in this case public int double is removed,curly braces 
+		are removed as this is inline function, return is removed) as below.
+		
+		doubleNumberFunction = (int a)-> a*2;
+		
+		
+		while developing lambda expression existing interface concept was used for backward compatibility.
+		In Java 8 we can write interfaces which has implementation methods.
+		
+		Functional interface
+			An interface which has only one abstract methods is know as functional interface.
+			and this type of interface qualified to be used for lambda implementation.
+			
+			There is a limitation in using a lambda with functional interface and that is when let say  
+			somebody adds another method in the interface in future all the lambda implementation will 
+			fail and hence to overcome this issue Java came up with an annotation @FunctionalInterace which 
+			when used with the interface you cannot declare another method in that interface.
+			
+			Using @FunctionalInterface is optional but if Lambdas implementation are there for that interface 
+			then it is good practice to have that annotation  
+			
+			Java provides some out of the box interfaces and we can use those interfaces when we need some common 
+			scenarios like returning boolean after some condition checking in java.util.function
+			
+			e.g Predicate interface
+		
+		
+		Prior to java 8 interface in java can only have abstract methods .All the 
+		interface methods are public abstract by default .Java 8 allows the interfaces to have static and default methods.
+		
+		The reason we have default methods in interface is to allow developers to add new methods to the interfaces
+		without affecting the classes implementing these interfaces.
+		
+		
+		Stream in java 8
+		-----------------
+		A stream is a sequence of objects that supports various methods which can be pipelined 
+		to produce the desired result.
+		Streams do not change the original data structure , they only provide the result as per the  pipelined methods.
+		Each intermediate operation is lazily executed and returns a stream of result hence 
+		various intermediate operation can be pipelined.
+		Terminal operations mark the end of stream and return the result. 
+		

@@ -1,0 +1,113 @@
+https://dzone.com/articles/design-patterns-uncovered-1
+https://www.geeksforgeeks.org/adapter-pattern/
+https://www.youtube.com/watch?v=beI_xOkABs0
+
+
+https://springframework.guru/gang-of-four-design-patterns/
+
+Design Patterns
+		Industry standard approach to solve a recurring problem
+		
+Design patterns are broadly classified in three categories
+		Creational
+			Singleton			
+			Factory
+			Abstract Factory
+			Builder - Builder pattern allows you to enforce a step by step process to construct a complex object
+					 as a furnished product.
+			Prototype-  you do not create a new object for each client requesting the object. Instead, 
+						you start by creating a single object, called a prototype and make copies of it for each 
+						client requesting the object
+		Structural 	
+			Adapter pattern
+				Def: The adapter pattern convert the interface of a class into another interface clients expect. 
+				Adapter lets classes work together that couldn’t otherwise because of incompatible interfaces
+				To use an adapter:
+					The client makes a request to the adapter by calling a method on it using the target interface.
+					The adapter translates that request on the adaptee using the adaptee interface.
+					Client receive the results of the call and is unaware of adapter’s presence.
+			Bridge Pattern
+			Composite Pattern
+			Decorator Pattern - You can attach new responsibility to an object dynamically.
+			Facade pattern
+						Provide a unified interface to a set of interfaces in a subsystem. Façade defines 
+						a higher-level interface that makes the subsystem easier to use
+			Flyweight Pattern
+			Proxy Pattern		
+		Behavioural
+			Chain of responsibility pattern
+			Command Pattern
+			Interpretor Pattern
+			Iterator pattern - Accesses the elements of an object sequentially
+			Mediator pattern - Allows loose coupling by being the only class that has detailed knowledge of their methods.
+			Memento Pattern - Provides the ability to restore an object to its previous state.We can use serialization
+							  to save the state of an object and retrieve it later(e.g Database rollback)
+			Observer Pattern - Is a publish/subscribe pattern which allows a number of observer objects to see an event.
+			State Pattern
+			Strategy Pattern - Dependency injection is one of the example of Strategy pattern where you create a strategy and different 
+			implementation of strategies and then you can switch between all those implementation
+			Template Method pattern
+			Visitor Pattern
+		
+	Factory Pattern
+	----------------
+	Factory Pattern is one of the creational design patterns and it is widely
+	used in JDK and frameworks like Spring and Struts
+	Factory Design pattern is used when we have a super class with multiple sub-classes 
+	and based on input we need to return one of the subclass. This class take out the 
+	responsibility of instantiating the class from the client program to the factory class
+	
+	-Super class in Factory pattern can be an interface , abstract class, or a normal java class
+	-Factory pattern provides approach to code for interface rather than implementation.	
+	-Factory pattern provides abstraction through inheritance.
+	
+	Abstract Factory Pattern
+	
+	Builder design pattern
+	
+	Prototype Pattern
+	Prototype pattern is used when the object creation is a costly 
+	affair and requires a lot of time and resources and you have a similar object already existing.
+	
+						STRUCTURAL DESIGN PATTERN
+	Adapter Design pattern
+	Adapter design interface is one of the structural design pattern and it 
+	is used so that two unrelated interfaces can work together.	
+	
+	
+	
+	Proxy Pattern
+	Provides control for accessing the original object.We can 
+	perform many operations like hiding the information of original object.
+	
+	It provides a protection of original object from outside world.
+	Proxy pattern is also known as Surrogate or Placeholder.
+	
+	
+	Flyweight Design Pattern
+	Flyweight design pattern is used when we need to create a lot of 
+	objects of a class since every object consumes memory it can be 
+	crucial for low memory devices such as mobile devices or embedded systems
+	
+	Before we apply flyweight design pattern we need to consider following
+	The number of objects to be created by the application should be huge
+	The object creation is heavy on memory and it is time consuming.
+	 
+	
+	
+	----------------------------------------------------
+
+	Wat are all the design patterns spring uses
+	1 Proxy design pattern - Spring uses this design pattern heavily in AOP.
+	2.Singleton - Beans defined in spring configuration are singleton by default.
+	3.Template method -  used extensively in JDBC template , JMS template and JPA Template and removes lot of boiler plate code.
+	4.Factory Pattern for loading the beans
+	5.prototype pattern  - Instance type can be prototype
+	6. abstract Factory  - Allows the creation of objects without specifying their concrete type.
+	
+	
+	
+	
+	
+	
+	
