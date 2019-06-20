@@ -97,12 +97,13 @@ public class BST {
 		Queue<Node> q = new LinkedList<Node>();
 		q.offer(node);
 		
+		
 		while(!q.isEmpty())
 		{
 			 temp = q.poll();
 			if(temp.leftChild!=null)
 				q.offer(temp.leftChild);
-			if(temp.rightChild!=null)
+			else if(temp.rightChild!=null)
 				q.offer(temp.rightChild);
 		}
 		

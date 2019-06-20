@@ -10,7 +10,7 @@ public class DutchFlagProblem {
 		dutchArrange(arr);	
 		for(int num:arr)
 		{
-		System.out.print(num+" ");
+		System.out.print(num+" "); 
 		}
 		
 	}

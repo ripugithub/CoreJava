@@ -47,7 +47,7 @@ General rules for Big O notation
 5n - >O(n)
 2. O(1) < O(logn) < O(n) < O(nLogn) < O(n^2) < O(2^n) < O(n!)
 
-Total runtime in an algorithm is max runtime of the step in the algoritm since the lower order runtime is dropped or negligible
+Total runtime in an algorithm is max runtime of the step in the algorithm since the lower order runtime is dropped or negligible
 
 O(1)  -> Constant Time 
 e.g. Below expression does not depend on input size hence the time complexity is a constant time i.e O(1)

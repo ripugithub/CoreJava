@@ -14,10 +14,10 @@ public class CheckForDuplicate {
 		List list = Arrays.asList(arr);
 		System.out.println(list.size());
 		
-		Set set = new HashSet(Arrays.asList(arr));
+		Set set = new HashSet(list);
 		System.out.println(list.size()+" "+set.size());
 		
-		if(arr.length==set.size())
+		if(list.size()==set.size())
 		{
 			System.out.println("Array does not contain duplicate elements");
 		}else {

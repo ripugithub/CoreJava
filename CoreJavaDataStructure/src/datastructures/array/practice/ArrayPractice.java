@@ -192,8 +192,6 @@ public class ArrayPractice {
 		
 		System.out.println(" Second Highest: "+secondHighest);
 		
-		
-		
 	}
 
 }

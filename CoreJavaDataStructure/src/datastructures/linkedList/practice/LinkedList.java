@@ -1,5 +1,5 @@
 package datastructures.linkedList.practice;
-
+//source:GeeksForGeeks
 class LinkedList 
 { 
     Node head;  // head of list 
