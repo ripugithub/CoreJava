@@ -1,4 +1,4 @@
-package com.hitachi.topics.oca;
+package com.practice.topics.oca;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;

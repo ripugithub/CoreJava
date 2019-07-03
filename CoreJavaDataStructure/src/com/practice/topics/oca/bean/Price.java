@@ -1,4 +1,4 @@
-package com.hitachi.topics.oca.bean;
+package com.practice.topics.oca.bean;
 
 public class Price {
 

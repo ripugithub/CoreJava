@@ -1,9 +1,10 @@
-package com.hitachi.topics.oca;
+package com.practice.topics.oca;
 
 import java.util.HashMap;
 import java.util.Set;
+import com.practice.topics.oca.bean.Price;
 
-import com.hitachi.topics.oca.bean.Price;
+
 
 public class MyDuplicateExample {
 	public static void main(String s[])

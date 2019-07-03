@@ -1,6 +1,6 @@
 package com.practice.topics.java8.anonymous;
 
-import com.hitachi.topics.java8.anonymous.Hello;
+
 
 /**
  * A class that have no name is known as anonymous inner class in java. 

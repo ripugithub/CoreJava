@@ -1,4 +1,4 @@
-package com.hitachi.topics.misc;
+package com.practice.topics.misc;
 
 
 class Animal{

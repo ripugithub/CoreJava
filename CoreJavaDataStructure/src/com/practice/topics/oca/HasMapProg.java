@@ -1,4 +1,4 @@
-package com.hitachi.topics.oca;
+package com.practice.topics.oca;
 
 import java.util.Collection;
 import java.util.HashMap;

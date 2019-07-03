@@ -1,4 +1,4 @@
-package com.hitachi.topics.threads;
+package com.practice.topics.threads;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

@@ -1,4 +1,4 @@
-package com.hitachi.topics.designPatterns.adapterPattern;
+package com.practice.topics.designPatterns.adapterPattern;
 
 public class SocketClassAdapterImpl extends Socket implements SocketAdapter {
 

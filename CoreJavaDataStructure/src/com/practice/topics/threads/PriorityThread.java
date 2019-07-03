@@ -1,4 +1,4 @@
-package com.hitachi.topics.threads;
+package com.practice.topics.threads;
 
 public class PriorityThread extends Thread{
 

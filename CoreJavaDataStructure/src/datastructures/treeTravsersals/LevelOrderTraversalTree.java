@@ -30,11 +30,9 @@ public class LevelOrderTraversalTree {
 		{
 			return 0;
 		}
+		return 0;
 		
-		if(root.left>root.right) {
-			
-			lheight = height(root.left);
-		}
+		
 	}
 
 }

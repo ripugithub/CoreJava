@@ -1,4 +1,4 @@
-package com.hitachi.topics.designPatterns.abstractFactoryPattern;
+package com.practice.topics.designPatterns.abstractFactoryPattern;
 
 public class TestAbstarctDesignPattern {
 

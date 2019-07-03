@@ -1,4 +1,4 @@
-package com.hitachi.topics.designPatterns.flyweight;
+package com.practice.topics.designPatterns.flyweight;
 
 public class Letter {
 	private String value;

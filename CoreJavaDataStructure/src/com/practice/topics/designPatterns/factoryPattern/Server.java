@@ -1,4 +1,4 @@
-package com.hitachi.topics.designPatterns.factoryPattern;
+package com.practice.topics.designPatterns.factoryPattern;
 
 public class Server extends Computer{
 	

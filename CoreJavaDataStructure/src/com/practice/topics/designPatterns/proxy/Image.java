@@ -1,4 +1,4 @@
-package com.hitachi.topics.designPatterns.proxy;
+package com.practice.topics.designPatterns.proxy;
 
 
 public class Image {

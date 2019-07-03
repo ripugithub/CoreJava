@@ -1,4 +1,4 @@
-package com.hitachi.topics.designPatterns.proxy;
+package com.practice.topics.designPatterns.proxy;
 
 import java.util.ArrayList;
 import java.util.List;

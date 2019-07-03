@@ -1,4 +1,4 @@
-package com.hitachi.topics.designPatterns.flyweight;
+package com.practice.topics.designPatterns.flyweight;
 
 import java.util.ArrayList;
 import java.util.List;

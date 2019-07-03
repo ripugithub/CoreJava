@@ -30,7 +30,7 @@ public class SelectionSort {
 	public static void main(String s[])
 	{
 		int[] arr = new int[] {64, 25, 12, 22, 11};
-		selectionSort1(arr);
+		selectionSort(arr);
 		for(int num:arr)
 		{
 			System.out.println(num+" ");
