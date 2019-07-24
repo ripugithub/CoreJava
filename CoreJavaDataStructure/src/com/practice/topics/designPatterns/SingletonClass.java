@@ -4,7 +4,7 @@ public class SingletonClass {
 	
 	private static SingletonClass instance;
 	
-	private SingletonClass() {};
+	private SingletonClass() {}
 	
 	public static SingletonClass getInstance() {
 		
