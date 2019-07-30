@@ -9,7 +9,7 @@ public class ArrayRotate {
 		System.out.println("Before Rotate::");
 			printArray(arr);
 			
-			System.out.println("After Rotation for 4 times::");	
+			System.out.println("After Rotation ");	
 			
 			leftRotateByN(arr,5,1);
 			printArray(arr);

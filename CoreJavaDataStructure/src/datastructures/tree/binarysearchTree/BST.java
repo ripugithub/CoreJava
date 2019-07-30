@@ -88,19 +88,19 @@ public class BST {
 		
 	}
 	//find the deepest node of the tree
-	private Node findDeepestNode(Node node)
+	public Node findDeepestNode(Node node)
 	{
 		Node temp=null;
 		if(node==null)
 		return null;
 		
 		Queue<Node> q = new LinkedList<Node>();
-		q.offer(node);
+		q.offer(node); //Inserts the specified element into this queue
 		
 		
 		while(!q.isEmpty())
 		{
-			 temp = q.poll();
+			 temp = q.poll();  //Retrieves and removes the head of this queue, or returns null if this queue is empty
 			if(temp.leftChild!=null)
 				q.offer(temp.leftChild);
 			else if(temp.rightChild!=null)
@@ -111,7 +111,7 @@ public class BST {
 		
 	}
 	
-	private int noOfLeavesInBinaryTree(Node node)
+	public int noOfLeavesInBinaryTree(Node node)
 	{
 		Node temp = null;
 		int count=0;
@@ -133,7 +133,9 @@ public class BST {
 				count++;
 			}
 			if(temp.leftChild!=null)
+			{
 				q.offer(temp.leftChild);
+			}
 			if(temp.rightChild!=null)
 			{
 				q.offer(temp.rightChild);

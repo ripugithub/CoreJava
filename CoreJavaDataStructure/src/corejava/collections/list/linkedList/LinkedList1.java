@@ -9,7 +9,7 @@ public class LinkedList1 {
 	
 	public static void main(String[] str)
 	{
-		List<String> list = new LinkedList<String>();
+		LinkedList<String> list = new LinkedList<String>();
 		list.add("Ripu");
 		list.add("Amit");
 		list.add("Rohit");
@@ -23,6 +23,14 @@ public class LinkedList1 {
 		list1.add("Raj");
 		
 		list1.forEach(name->System.out.println(name));
+		
+		
+		System.out.println("poll method of Linked List:"+list.poll());
+		System.out.println("---------------After poll-----------------");
+		list.forEach(name->System.out.println(name));
+		list.offer("Ripudaman");
+		System.out.println("---------------After offer-----------------");
+		list.forEach(name->System.out.println(name));
 	}
 
 }

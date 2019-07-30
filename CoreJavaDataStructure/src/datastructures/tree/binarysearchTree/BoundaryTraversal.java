@@ -58,11 +58,11 @@ public Node root;
 				System.out.print(node.getData()+"  ");
 				printLeftBoundary(node.leftChild);
 			}
-			/*else if(node.rightChild!=null)
+			else if(node.rightChild!=null)
 			{
 				System.out.print(node.getData()+"  ");
 				printLeftBoundary(node.rightChild);
-			}*/
+			}
 		}
 	}
 	static void printRightBoundary(Node node)
@@ -75,11 +75,11 @@ public Node root;
 				 printRightBoundary(node.rightChild);
 			 }
 			 
-			 /*else if(node.leftChild!=null)
+			 else if(node.leftChild!=null)
 			 {
 				 System.out.print(node.getData()+"  ");
 				 printRightBoundary(node.leftChild);
-			 }*/
+			 }
 			 
 		 }
 	 }

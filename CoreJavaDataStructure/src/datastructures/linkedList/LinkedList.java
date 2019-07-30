@@ -68,8 +68,8 @@ public class LinkedList {
 			for (int i = 0; i < index - 1; i++) {
 				n = n.next;
 			}
-			n1 = n.next;
-			n.next = n1.next;
+			n1 = n.next;  //this takes hold of the next to next node in the linked list.
+			n.next = n1.next;  
 		}
 	}
 

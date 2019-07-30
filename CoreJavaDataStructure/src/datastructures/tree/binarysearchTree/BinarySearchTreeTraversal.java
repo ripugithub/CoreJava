@@ -32,6 +32,7 @@ public class BinarySearchTreeTraversal {
 		bst.add(7);
 		bst.add(5);
 		bst.add(10);
+		System.out.println("Number of leaves::"+bst.noOfLeavesInBinaryTree(bst.root));
 		System.out.println("PreOrder Traversal");
 		preOrderTraversal(bst.root);
 		System.out.println();
@@ -41,7 +42,7 @@ public class BinarySearchTreeTraversal {
 		System.out.println("InOrder Traversal");
 		inOrderTraversal(bst.root);
 		//System.out.println(bst.search(11));
-		System.out.println(bst.findLength(bst.root));
+		System.out.println("\n"+bst.findLength(bst.root));
 	}
 	
 
